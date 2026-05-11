@@ -104,7 +104,7 @@ html, body{
 
 .blog-post{
     inline-size: 300px;
-
+    background-color: #090000;
     padding: 20px;
     border-radius: 10px;
 }
@@ -118,7 +118,7 @@ html, body{
 }
 
 .blog-post h3{
-    /* margin : 0; */
+     
     font-size: 24px;
     font-weight: 500;
     margin-block-start: 20px;
