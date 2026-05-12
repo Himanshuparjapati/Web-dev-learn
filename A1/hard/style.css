@@ -1,0 +1,60 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body,html{
+    inline-size: 100%;
+    block-size: 100%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+.main{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Hide the checkbox */
+#menu-toggle { display: none; }
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 30px;
+}
+
+.bar {
+  background-color: #333;
+  height: 4px;
+  width: 100%;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* Animation: Middle bar vanishes, top and bottom form an X */
+#menu-toggle:checked + .hamburger .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+#menu-toggle:checked + .hamburger .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
