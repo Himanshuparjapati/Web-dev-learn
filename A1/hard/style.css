@@ -58,28 +58,28 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  width: 30px;
+  inline-size: 30px;
 }
 
 .bar {
   background-color: #333;
-  height: 4px;
-  width: 100%;
+  block-size: 4px;
+  inline-size: 100%;
   transition: 0.4s;
   border-radius: 2px;
 }
 
 .center {
   display: flex;
-  height: 80vh;
-  width: 100%;
+  block-size: 80vh;
+  inline-size: 100%;
 }
 
 .left,
 .right {
-  width: 40%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  inline-size: 40%;
+  block-size: 100%;
+  background-color: transparent;
   border-radius: 10px;
 }
 
@@ -91,39 +91,52 @@ nav {
 }
 
 .right img {
-  width: 100%;
-  height: 80%;
+  inline-size: 100%;
+  block-size: 80%;
   border-radius: 10px;
   object-fit: cover;
   position: absolute;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  margin-block-end: 100px;
 }
 .btn {
-  height: 100px;
-  width: 100px;
+  block-size: 100px;
+  inline-size: 100px;
   position: absolute;
-  bottom: 20px;
+  inset-block-end: 20px;
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
   border: none;
-  margin-left: 471px;
-  margin-bottom: 47px;
+  margin-inline-start: 530px;
+  margin-block-end: 100px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
   z-index: 1;
   border-radius: 50px;
 }
 #bag-icon {
-  margin-bottom: 8px;
+  margin-block-end: 8px;
+}
+
+.rating{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  inset-block-end: 600px;
+  margin-inline-start: 1020px;
+  z-index: 1;
+  background:whitesmoke;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 .aside {
-  height: 100%;
-  width: 10%;
-  background-color: rgba(255, 255, 255, 0.8);
-  margin-left: 40px;
+  block-size: 100%;
+  inline-size: 10%;
+  background-color: transparent;
+  margin-inline-start: 40px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -135,7 +148,7 @@ nav {
 .box2,
 .box3,
 .box4 {
-  height: 25%;
+  block-size: 25%;
   background-color: transparent;
 
   border-radius: 10px;
@@ -146,8 +159,8 @@ nav {
 .box2 img,
 .box3 img,
 .box4 img {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 }
 #menu-toggle:checked + .hamburger .bar:nth-child(1) {
